@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'ng-welcome-msg-app';
-	userName='';
+	userName="";
 
 	setName(name){
 		this.userName=name;
