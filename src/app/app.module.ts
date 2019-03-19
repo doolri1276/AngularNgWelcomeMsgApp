@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeMsgComponent } from './welcome-msg/welcome-msg.component';
 import { LangSelectorComponent } from './lang-selector/lang-selector.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, COMPOSITION_BUFFER_MODE } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms'
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{provide: COMPOSITION_BUFFER_MODE, useValue:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
