@@ -18,7 +18,7 @@ import { FormsModule, COMPOSITION_BUFFER_MODE } from '@angular/forms'
     AppRoutingModule,
     FormsModule
   ],
-  providers: [{provide: COMPOSITION_BUFFER_MODE, useValue:true}],
+  providers: [{provide: COMPOSITION_BUFFER_MODE, useValue:false}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
