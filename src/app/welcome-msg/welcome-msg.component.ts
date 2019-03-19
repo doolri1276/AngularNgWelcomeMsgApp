@@ -43,7 +43,7 @@ export class WelcomeMsgComponent implements OnInit {
 	}
 
 	showWelcomeMsg() {
-		this.welcomeMsg = this.i18nSupporter.getWelcomeMsgByCode(this.userName, 'ko');
+		this.welcomeMsg = this.i18nSupporter.getWelcomeMsg(this.userName);
 	}
 
 }
