@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-welcome-msg-app';
+	title = 'ng-welcome-msg-app';
+	userName='';
+
+	setName(name){
+		this.userName=name;
+	}
 }
