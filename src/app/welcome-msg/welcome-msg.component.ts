@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { I18nSupportService } from '../i18n-support.service';
+
 
 @Component({
   selector: 'app-welcome-msg',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeMsgComponent implements OnInit {
 
-  	constructor() { }
+  	constructor(public i18nSupporter: I18nSupportService) { }
 
   	ngOnInit() {
   	}
@@ -16,6 +18,7 @@ export class WelcomeMsgComponent implements OnInit {
 
 	private valid = false;
 	private static CHK_KEYUP_WAIT_SEC = 5000;
+	private welcomeMsg: string;
 
 	// 예제 3-9에서 삭제
 	// ngAfterViewInit() {
@@ -37,6 +40,10 @@ export class WelcomeMsgComponent implements OnInit {
 
 	onChange() {
 		this.valid = this.userName.length > 0;
+	}
+
+	showWelcomeMsg() {
+		this.welcomeMsg = this.i18nSupporter.getWelcomeMsgByCode(this.userName, 'ko');
 	}
 
 }
