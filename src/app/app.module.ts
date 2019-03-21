@@ -13,7 +13,9 @@ import { LangSelectorBtnPipe } from './lang-selector/lang-selector-btn.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatSnackBarModule, MatCardModule, MatInputModule, MatRadioModule, MatButtonModule } from '@angular/material';
 
+//NgModule 데커레이터
 @NgModule({
+  // 사용할 모든 컴포넌트들을 배열로 선언 (선언해야 사용 가능하다)
   declarations: [
     AppComponent,
     WelcomeMsgComponent,
@@ -32,6 +34,6 @@ import { MatToolbarModule, MatSnackBarModule, MatCardModule, MatInputModule, Mat
     {provide: COMPOSITION_BUFFER_MODE, useValue:false},
     I18nSupportService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //브라우저에서 최초 index.html을 요청하여 애플리케이션을 실행할 때 사용할 컴포넌트
 })
 export class AppModule { }
